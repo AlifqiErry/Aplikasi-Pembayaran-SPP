@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,11 @@ route::get('/template', function() {
 });
 
 Route::resource('siswas', SiswaController::class);
+Route::resource('kelas', KelasController::class);
+
+// Route::get('/kelas','KelasController@edit');
+// Route::get('/kelas/edit/{id}','KelasController@edit');
+// Route::get('/kelas/create','KelasController@edit');
 
 Route::resource('orders', OrderController::class)->only(['index', 'show']);
 
